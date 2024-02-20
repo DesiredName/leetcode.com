@@ -1,0 +1,16 @@
+{
+    "name": "leetcode.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "c": "git add . && git commit -m 'commit' && git push",
+        "backspace-string-compare": "cd backspace-string-compare && nodemon index.js",
+        "longest-string-chain": "cd longest-string-chain && nodemon index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^3.0.3"
+    }
+}
