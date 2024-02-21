@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/longest-string-chain/
+
 const tests = [
     // [[case], [output], k, length]
     [['a', 'b', 'ba', 'bca', 'bda', 'bdca'], 4],

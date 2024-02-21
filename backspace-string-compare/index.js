@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/backspace-string-compare/
+
 /**
  * @param {string} s
  * @param {string} t
