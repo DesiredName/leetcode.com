@@ -1092,9 +1092,15 @@ var longestStrChain = function (tcase) {
     return max_depth;
 };
 
+let is_ok = true;
+
 for (const test of tests) {
     const tcase = test[0];
     const length = test[1];
 
-    console.log(longestStrChain(tcase), ` === ${length}`);
+    // console.log(longestStrChain(tcase), ` === ${length}`);
+
+    is_ok = is_ok && longestStrChain(tcase) === length;
 }
+
+console.log(is_ok);

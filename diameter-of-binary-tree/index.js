@@ -127,10 +127,17 @@ function printTree(t) {
     return s;
 }
 
+let is_ok = true;
+
 for (const { tree, expected } of tests) {
-    console.log({
-        tree: printTree(tree),
-        computed: diameterOfBinaryTree(tree),
-        expected,
-    });
+    const computed = diameterOfBinaryTree(tree);
+    // console.log({
+    //     tree: printTree(tree),
+    //     computed,
+    //     expected,
+    // });
+
+    is_ok = is_ok && computed === expected;
 }
+
+console.log(is_ok);

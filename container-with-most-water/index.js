@@ -55,6 +55,12 @@ const tests = [
     },
 ];
 
+let is_ok = true;
+
 for (let { height, expected } of tests) {
-    console.log({ height, result: maxArea(height), expected });
+    // console.log({ height, result: maxArea(height), expected });
+
+    is_ok = is_ok && maxArea(height) === expected;
 }
+
+console.log(is_ok);

@@ -88,10 +88,43 @@ var backspaceCompare = function (s, t) {
     }
 };
 
-console.log(backspaceCompare('##ab#cd##a', 'av##s#'), '===', false);
-console.log(backspaceCompare('ab#c####', 'ad#c'), '===', false);
-console.log(backspaceCompare('######ab##', 'aaa##c###d#'), '===', true);
-console.log(backspaceCompare('a#c', 'b'), '===', false);
-console.log(backspaceCompare('a#c#ba#aaa#a', 'baa'), '===', false);
-console.log(backspaceCompare('a#c#ba#aaa#a', 'baaa'), '===', true);
-console.log(backspaceCompare('aaa###a', 'aaaa###a'), '===', false);
+const tests = [
+    {
+        test: ['##ab#cd##a', 'av##s#'],
+        expected: false,
+    },
+    {
+        test: ['ab#c####', 'ad#c'],
+        expected: false,
+    },
+    {
+        test: ['######ab##', 'aaa##c###d#'],
+        expected: true,
+    },
+    {
+        test: ['a#c', 'b'],
+        expected: false,
+    },
+    {
+        test: ['a#c#ba#aaa#a', 'baa'],
+        expected: false,
+    },
+    {
+        test: ['a#c#ba#aaa#a', 'baaa'],
+        expected: true,
+    },
+    {
+        test: ['aaa###a', 'aaaa###a'],
+        expected: false,
+    },
+];
+
+let is_ok = true;
+
+for (const { test, expected } of tests) {
+    // console.log(backspaceCompare(...test), '===', expected);
+
+    is_ok = is_ok && backspaceCompare(...test) === expected;
+}
+
+console.log(is_ok);

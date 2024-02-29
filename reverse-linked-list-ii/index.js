@@ -93,6 +93,29 @@ function get_list(n) {
     }
 }
 
+const tests = [
+    {
+        test: [get_list(1), 2, 4],
+        expected: '1, 4, 3, 2, 5',
+    },
+    {
+        test: [get_list(5), 1, 1],
+        expected: '5',
+    },
+    {
+        test: [get_list(1), 3, 4],
+        expected: '1, 2, 4, 3, 5',
+    },
+    {
+        test: [get_list(4), 1, 2],
+        expected: '5, 4',
+    },
+    {
+        test: [get_list(0), 0, 1],
+        expected: '',
+    },
+];
+
 function print(n) {
     const str = [];
     while (n) {
@@ -103,32 +126,18 @@ function print(n) {
     return str.join(', ');
 }
 
-console.dir({
-    the_case: print(get_list(1)),
-    computed: print(reverseBetween(get_list(1), 2, 4)),
-    expected: '1, 4, 3, 2, 5',
-});
+let is_ok = true;
 
-console.dir({
-    the_case: print(get_list(5)),
-    computed: print(reverseBetween(get_list(5), 1, 1)),
-    expected: '5',
-});
+for (const { test, expected } of tests) {
+    const computed = reverseBetween(...test);
 
-console.dir({
-    the_case: print(get_list(1)),
-    computed: print(reverseBetween(get_list(1), 3, 4)),
-    expected: '1, 2, 4, 3, 5',
-});
+    // console.dir({
+    //     the_case: print(test[0]),
+    //     computed: print(computed),
+    //     expected,
+    // });
 
-console.dir({
-    the_case: print(get_list(4)),
-    computed: print(reverseBetween(get_list(4), 1, 2)),
-    expected: '5, 4',
-});
+    is_ok = is_ok && print(computed) === expected;
+}
 
-console.dir({
-    the_case: print(get_list(0)),
-    computed: print(reverseBetween(get_list(0), 0, 1)),
-    expected: '',
-});
+console.log(is_ok);

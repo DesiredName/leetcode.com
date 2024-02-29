@@ -39,6 +39,11 @@ const cases = [
     },
 ];
 
+let is_ok = true;
+
 for (let { nums, target, expected } of cases) {
-    console.log({ nums, target, result: twoSum(nums, target), expected });
+    // console.log({ nums, target, result: twoSum(nums, target), expected });
+    is_ok = is_ok && twoSum(nums, target).join() === expected.join();
 }
+
+console.log(is_ok);

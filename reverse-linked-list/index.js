@@ -79,20 +79,33 @@ function print(n) {
     return str.join(', ');
 }
 
-console.dir({
-    the_case: print(get_list(1)),
-    computed: print(reverseList(get_list(1), 2, 4)),
-    expected: '5, 4, 3, 2, 1',
-});
+const tests = [
+    {
+        test: [get_list(1), 2, 4],
+        expected: '5, 4, 3, 2, 1',
+    },
+    {
+        test: [get_list(4), 1, 1],
+        expected: '5, 4',
+    },
+    {
+        test: [get_list(0), 0, 1],
+        expected: '',
+    },
+];
 
-console.dir({
-    the_case: print(get_list(4)),
-    computed: print(reverseList(get_list(4), 1, 1)),
-    expected: '5, 4',
-});
+let is_ok = true;
 
-console.dir({
-    the_case: print(get_list(0)),
-    computed: print(reverseList(get_list(0), 0, 1)),
-    expected: '',
-});
+for (const { test, expected } of tests) {
+    const computed = reverseList(...test);
+
+    // console.dir({
+    //     the_case: print(test[0]),
+    //     computed: print(computed),
+    //     expected,
+    // });
+
+    is_ok = is_ok && print(computed) === expected;
+}
+
+console.log(is_ok);

@@ -124,11 +124,16 @@ function printTree(t) {
     return s;
 }
 
+let is_ok = true;
+
 for (let { t1, t2, expected } of tests) {
-    console.log({
-        t1: printTree(t1),
-        t2: printTree(t2),
-        computed: isSameTree(t1, t2),
-        expected,
-    });
+    // console.log({
+    //     t1: printTree(t1),
+    //     t2: printTree(t2),
+    //     computed: isSameTree(t1, t2),
+    //     expected,
+    // });
+    is_ok = is_ok && isSameTree(t1, t2) === expected;
 }
+
+console.log(is_ok);

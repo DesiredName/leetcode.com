@@ -87,6 +87,11 @@ const tests = [
     },
 ];
 
+let is_ok = true;
+
 for (let { height, expected } of tests) {
-    console.log({ height, result: trap(height), expected });
+    // console.log({ height, result: trap(height), expected });
+    is_ok = is_ok && trap(height) === expected;
 }
+
+console.log(is_ok);
