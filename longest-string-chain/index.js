@@ -1069,7 +1069,7 @@ var longestStrChain = function (tcase) {
 
     // sort & compute
     const best_depth_set = new Set();
-    const words = tcase.toSorted((a, b) => {
+    const words = tcase.sort((a, b) => {
         const a_len = a.length;
         const b_len = b.length;
 
