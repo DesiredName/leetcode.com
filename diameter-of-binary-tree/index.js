@@ -28,6 +28,8 @@ function check(node) {
     }
 }
 
+console.error('CHeck the Thompsons threaded algorythm');
+
 var diameterOfBinaryTree = function (root) {
     return check(root).diam;
 };

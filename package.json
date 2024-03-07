@@ -14,7 +14,9 @@
         "container-with-most-water": "cd container-with-most-water && nodemon index.js",
         "trapping-rain-water": "cd trapping-rain-water && nodemon index.js",
         "same-tree": "cd same-tree && nodemon index.js",
-        "diameter-of-binary-tree": "cd diameter-of-binary-tree && nodemon index.js"
+        "diameter-of-binary-tree": "cd diameter-of-binary-tree && nodemon index.js",
+        "ways-to-split-array-into-three-subarrays": "cd ways-to-split-array-into-three-subarrays && nodemon index.js",
+        "linked-list-cycle": "cd linked-list-cycle && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",

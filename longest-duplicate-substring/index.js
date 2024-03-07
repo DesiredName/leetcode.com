@@ -60,6 +60,8 @@ var longestDupSubstring = function (s) {
     }
 };
 
+console.error('Timeout error, find better solution');
+
 for (let test of tests) {
     const tcase = test[0];
     const output = test[1];
