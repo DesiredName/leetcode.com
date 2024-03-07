@@ -61,7 +61,7 @@ let is_ok = true;
 for (const { test, expected } of tests) {
     // console.log(hasCycle(test), expected);
 
-    let is_ok = hasCycle(test) === expected;
+    is_ok = is_ok && hasCycle(test) === expected;
 }
 
 console.log(is_ok);
