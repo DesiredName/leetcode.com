@@ -1,18 +1,50 @@
 var evaluate = function (s, knowledge) {
-    const regexp = /\(\w*\)/gi;
     const k = new Map(knowledge);
+    const l = s.length;
 
-    let output = s.slice();
-    let target;
-    while ((target = regexp.exec(s)) !== null) {
-        const template = target[0];
-        const key = template.slice(1, template.length - 1);
+    let o = '';
 
-        output = output.replace(template, k.get(key) ?? '?');
+    for (let i = 0; i < l; i++) {
+        const char = s[i];
+
+        if (char === '(') {
+            let key = '';
+
+            i++;
+
+            while (s[i] !== ')') {
+                key = key + s[i];
+                i++;
+            }
+
+            o = o + (k.get(key) ?? '?');
+        } else {
+            o = o + char;
+        }
     }
 
-    return output;
+    return o;
 };
+
+/** Regexp solution
+    const k = new Map(knowledge);
+    const l = s.length;
+
+    while (true) {
+        const target = /\(\w*\)/g.exec(s);
+        if (target == null) break;
+        const template = target[0];
+        const key = template.slice(1, template.length - 1);
+        const val = k.get(key) ?? '?';
+
+        s =
+            s.slice(0, target.index) +
+            val +
+            s.slice(target.index + template.length);
+    }
+
+    return s;
+ */
 
 const tests = [
     {
