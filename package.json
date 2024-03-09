@@ -21,7 +21,8 @@
         "middle-of-the-linked-list": "cd middle-of-the-linked-list && nodemon index.js",
         "evaluate-the-bracket-pairs-of-a-string": "cd evaluate-the-bracket-pairs-of-a-string && nodemon index.js",
         "count-elements-with-maximum-frequency": "cd count-elements-with-maximum-frequency && nodemon index.js",
-        "median-of-two-sorted-arrays": "cd median-of-two-sorted-arrays && nodemon index.js"
+        "median-of-two-sorted-arrays": "cd median-of-two-sorted-arrays && nodemon index.js",
+        "the-kth-factor-of-n": "cd the-kth-factor-of-n && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
