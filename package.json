@@ -23,7 +23,9 @@
         "count-elements-with-maximum-frequency": "cd count-elements-with-maximum-frequency && nodemon index.js",
         "median-of-two-sorted-arrays": "cd median-of-two-sorted-arrays && nodemon index.js",
         "the-kth-factor-of-n": "cd the-kth-factor-of-n && nodemon index.js",
-        "intersection-of-two-arrays": "cd intersection-of-two-arrays && nodemon index.js"
+        "intersection-of-two-arrays": "cd intersection-of-two-arrays && nodemon index.js",
+        "add-two-numbers": "cd add-two-numbers && nodemon index.js",
+        "custom-sort-string": "cd custom-sort-string && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
