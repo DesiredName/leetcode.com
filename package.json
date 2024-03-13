@@ -25,7 +25,8 @@
         "the-kth-factor-of-n": "cd the-kth-factor-of-n && nodemon index.js",
         "intersection-of-two-arrays": "cd intersection-of-two-arrays && nodemon index.js",
         "add-two-numbers": "cd add-two-numbers && nodemon index.js",
-        "custom-sort-string": "cd custom-sort-string && nodemon index.js"
+        "custom-sort-string": "cd custom-sort-string && nodemon index.js",
+        "find-the-pivot-integer": "cd find-the-pivot-integer && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",

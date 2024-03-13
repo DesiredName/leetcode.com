@@ -97,37 +97,45 @@ const tests = [
         test: { l1: to_list([9, 9, 9, 9, 9, 9, 9]), l2: to_list([9, 9, 9, 9]) },
         expected: to_list([8, 9, 9, 9, 0, 0, 0, 1]),
     },
-    // {
-    //     test: { l1: to_list([5, 0, 7]), l2: to_list([1, 1, 1]) },
-    //     expected: to_list([6, 1, 8]),
-    // },
-    // {
-    //     test: { l1: to_list([2, 4, 3]), l2: to_list([5, 6, 4]) },
-    //     expected: to_list([7, 0, 8]),
-    // },
-    // {
-    //     test: {
-    //         l1: to_list([
-    //             1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //             0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
-    //         ]),
-    //         l2: to_list([5, 6, 4]),
-    //     },
-    //     expected: to_list([
-    //         6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    //         0, 0, 0, 0, 0, 0, 0, 1,
-    //     ]),
-    // },
+    {
+        test: { l1: to_list([5, 0, 7]), l2: to_list([1, 1, 1]) },
+        expected: to_list([6, 1, 8]),
+    },
+    {
+        test: { l1: to_list([2, 4, 3]), l2: to_list([5, 6, 4]) },
+        expected: to_list([7, 0, 8]),
+    },
+    {
+        test: {
+            l1: to_list([
+                1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+            ]),
+            l2: to_list([5, 6, 4]),
+        },
+        expected: to_list([
+            6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 1,
+        ]),
+    },
 ];
+
+let is_ok = true;
 
 for (let {
     test: { l1, l2 },
     expected,
 } of tests) {
-    console.log({
-        l1: print_list(l1),
-        l2: print_list(l2),
-        result: print_list(addTwoNumbers(l1, l2)),
-        expected: print_list(expected),
-    });
+    const result = print_list(addTwoNumbers(l1, l2));
+    const exp = print_list(expected);
+    // console.log({
+    //     l1: print_list(l1),
+    //     l2: print_list(l2),
+    //     result,
+    //     expected: exp,
+    // });
+
+    is_ok = is_ok && result === exp;
 }
+
+console.log(is_ok);
