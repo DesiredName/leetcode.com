@@ -11,13 +11,31 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function (l1, l2) {
-    let k = 0;
-    let head = null;
-    let last = null;
+    if (l1 == null && l2 == null) {
+        return null;
+    } else if (l1 == null) {
+        return l2;
+    } else if (l2 == null) {
+        return l1;
+    }
+
+    let v1 = l1.val;
+    let v2 = l2.val;
+    let v = v1 + v2;
+    let k = Math.floor(v / 10);
+
+    v = v - k * 10;
+
+    const head = { val: v, next: null };
+    let last = head;
+
+    l1 = l1.next;
+    l2 = l2.next;
 
     while (l1 != null || l2 != null) {
-        let v1 = 0;
-        let v2 = 0;
+        v = 0;
+        v1 = 0;
+        v2 = 0;
 
         if (l1 != null) {
             v1 = l1.val;
@@ -28,7 +46,7 @@ var addTwoNumbers = function (l1, l2) {
             l2 = l2.next;
         }
 
-        let v = k + (v1 + v2);
+        v = k + (v1 + v2);
 
         if (v > 9) {
             k = Math.floor(v / 10);
@@ -37,13 +55,8 @@ var addTwoNumbers = function (l1, l2) {
             k = 0;
         }
 
-        if (head == null) {
-            head = { val: v, next: null };
-            last = head;
-        } else {
-            last.next = { val: v, next: null };
-            last = last.next;
-        }
+        last.next = { val: v, next: null };
+        last = last.next;
     }
 
     if (k > 0) {
