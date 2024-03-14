@@ -19,6 +19,7 @@
 
 //     return res <= 0 ? i : i + 1;
 // };
+
 var bulbSwitch = function (n) {
     return Math.floor(Math.sqrt(n));
 };
