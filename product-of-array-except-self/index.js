@@ -9,7 +9,6 @@ var productExceptSelf = function (nums) {
         ans[i] = left;
         left *= nums[i];
     }
-    console.log(ans);
     for (let i = n - 1, right = 1; i >= 0; --i) {
         ans[i] *= right;
         right *= nums[i];
