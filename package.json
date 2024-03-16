@@ -27,7 +27,8 @@
         "add-two-numbers": "cd add-two-numbers && nodemon index.js",
         "custom-sort-string": "cd custom-sort-string && nodemon index.js",
         "find-the-pivot-integer": "cd find-the-pivot-integer && nodemon index.js",
-        "bulb-switcher": "cd bulb-switcher && nodemon index.js"
+        "bulb-switcher": "cd bulb-switcher && nodemon index.js",
+        "product-of-array-except-self": "cd product-of-array-except-self && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
