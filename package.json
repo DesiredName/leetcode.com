@@ -32,7 +32,8 @@
         "longest-substring-without-repeating-characters": "cd longest-substring-without-repeating-characters && nodemon index.js",
         "minimum-remove-to-make-valid-parentheses": "cd minimum-remove-to-make-valid-parentheses && nodemon index.js",
         "remove-zero-sum-consecutive-nodes-from-linked-list": "cd remove-zero-sum-consecutive-nodes-from-linked-list && nodemon index.js",
-        "validate-binary-search-tree": "cd validate-binary-search-tree && nodemon index.js"
+        "validate-binary-search-tree": "cd validate-binary-search-tree && nodemon index.js",
+        "recover-binary-search-tree": "cd recover-binary-search-tree && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
