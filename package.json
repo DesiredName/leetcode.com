@@ -34,7 +34,8 @@
         "remove-zero-sum-consecutive-nodes-from-linked-list": "cd remove-zero-sum-consecutive-nodes-from-linked-list && nodemon index.js",
         "validate-binary-search-tree": "cd validate-binary-search-tree && nodemon index.js",
         "recover-binary-search-tree": "cd recover-binary-search-tree && nodemon index.js",
-        "trapping-rain-water-ii": "cd trapping-rain-water-ii && nodemon index.js"
+        "trapping-rain-water-ii": "cd trapping-rain-water-ii && nodemon index.js",
+        "number-of-students-unable-to-eat-lunch": "cd number-of-students-unable-to-eat-lunch && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
