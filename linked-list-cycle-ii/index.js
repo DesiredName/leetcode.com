@@ -34,7 +34,7 @@ var detectCycle = function (head) {
             }
         }
 
-        p2 = head;
+        p1 = head;
 
         while (p1 !== p2) {
             p1 = p1.next;
