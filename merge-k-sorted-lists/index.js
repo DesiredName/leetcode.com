@@ -16,7 +16,6 @@ var mergeKLists = function (lists) {
         let x = list[i];
         let j = i;
 
-        console.log(JSON.stringify(list));
         while (j > 0 && list[j - 1] > x) {
             list[j] = list[j - 1];
             j = j - 1;
