@@ -36,7 +36,8 @@
         "recover-binary-search-tree": "cd recover-binary-search-tree && nodemon index.js",
         "trapping-rain-water-ii": "cd trapping-rain-water-ii && nodemon index.js",
         "number-of-students-unable-to-eat-lunch": "cd number-of-students-unable-to-eat-lunch && nodemon index.js",
-        "sum-of-left-leaves": "cd sum-of-left-leaves && nodemon index.js"
+        "sum-of-left-leaves": "cd sum-of-left-leaves && nodemon index.js",
+        "merge-k-sorted-lists": "cd merge-k-sorted-lists && nodemon index.js"
     },
     "author": "Krasnov Anton",
     "license": "ISC",
